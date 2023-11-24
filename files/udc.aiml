@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+        <pattern>HOLA</pattern>
+        <template>
+            <random>
+                <li>Hola, bienvenido a IsBot. ¿Qué necesitas?</li>
+                <li>Hola, espero que te encuentres bien ¿Dime qué necesitas de mi?</li>
+                <li>Hola, bienvenido. Espero que mi servicio sea útil para tí. Dime lo que necesitas</li>
+                <li>Hola, sé bienvenido a IsBot. ¿Te puedo ayudar en algo?</li>
+            </random>
+        </template>
+    </category>
+    
+<category>
+        <pattern>*</pattern>
+        <template>
+            No tengo la información que necesitas. Lo lamento, pero en un futuro la tendré para tí.
+        </template>
+    </category>
+</aiml>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>* HACES</pattern>
+        <template>
+            Soy un chatbot enfocado en música de rock clásico. Poseo ciertos datos básicos de
+            bandas musicales y álbumes. Cualquier pregunta que tengas, si está dentro de mi
+            base de datos, te la puedo decir con mucho gusto .
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* BANDAS *</pattern>
+        <template>
+            Poseo información de bandas clásicas como Queen, The Rolling Stones, The Beatles, Led
+            Zepelin, entre otros.
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* BEATLES</pattern>
+        <template>
+            Con gusto. Dime lo que necesitas de ellos: <set name = "topic">THE BEATLES</set>
+        </template>
+    </category>
+    
+    <topic name = "THE BEATLES">
+        <category>
+            <pattern>* DISCOS</pattern>
+            <template>¿Qué información quieres saber de sus discos?</template>
+        </category>
+    
+        <category>
+            <pattern>* HISTORIA</pattern>
+            <that>¿Qué información quieres saber de sus discos</that>
+            <template>Dime de qué disco quieres conocer</template>
+        </category>
+
+  
+        <category>
+        <pattern>* PLEASE PLEASE ME</pattern>
+        <that>Dime de qué disco quieres conocer</that>
+        <template>
+        Please Please Me (1963) fue el primer álbum lanzado por EMI-Parlophone el 22 de marzo de 
+        1963. Diez de las catorce canciones de dicho álbum en un solo día (11 de febrero de 1963). 
+        Las cuatro canciones restantes habían sido grabadas en 1962 y formaron parte del lado B del
+        LP original y las dos caras del segundo. La icónica foto de la portada fue tomada en la 
+        entonces sede de EMI Limited en el 20 de Manchester Square en el West End de Londres a 
+        principios de 1963 por Angus McBean.
+        </template>
+        </category>
+    
+    </topic>
+    
+
+    
+</aiml>
