@@ -13,21 +13,30 @@
         <pattern>* BANDAS *</pattern>
         <template>
             Poseo información de bandas clásicas como Queen, The Rolling Stones, The Beatles, Led
-            Zepelin, entre otros.
+            Zepelin, entre otros Sin embargo, en este momento solamente poseo información sobre The
+            Beatles. Pero en un furuto cercano, almacenaré de otras bandas geniales de rock.
         </template>
     </category>
     
     <category>
         <pattern>* BEATLES</pattern>
         <template>
-            Con gusto. Dime lo que necesitas de ellos: <set name = "topic">THE BEATLES</set>
+            Con gusto. Dime lo que necesitas de ellos discos, lista de canciones: 
+            <set name = "topic">THE BEATLES</set>
         </template>
     </category>
     
     <topic name = "THE BEATLES">
         <category>
             <pattern>* DISCOS</pattern>
-            <template>¿Qué información quieres saber de sus discos?</template>
+            <template>
+                ¿Qué información quieres saber de sus discos? Historia, lista de canciones
+            </template>
+        </category>
+        
+        <category>
+            <pattern>* LISTA DE CANCIONES</pattern>
+            <template>Escribe el nombre del disco:</template>
         </category>
     
         <category>
@@ -53,8 +62,41 @@
         LP original y las dos caras del segundo. La icónica foto de la portada fue tomada en la 
         entonces sede de EMI Limited en el 20 de Manchester Square en el West End de Londres a 
         principios de 1963 por Angus McBean.
+        ¿Deseas ver la lista de canciones?
         </template>
         </category>
+        
+        <category>
+        <pattern>SI</pattern>
+        <that>¿Deseas ver la lista de canciones</that>
+        <template>
+            Perfecto, aquí está la lista de canciones:
+            <ol>
+                <li>I Saw Her Standing There</li>
+                <li>Misery</li>
+                <li>Anna (Go To Him)</li>
+                <li>Chains</li>
+                <li>Boys</li>
+                <li>Ask Me Why</li>
+                <li>Please Please Me</li>
+                <li>Love Me Do</li>
+                <li>P.S. I Love You</li>
+                <li>Baby It's You</li>
+                <li>Do You Want To Know A Secret</li>
+                <li>A Taste Of Honey</li>
+                <li>There's a Place</li>
+                <li>Twist and Shout</li>
+            </ol>
+        </template>
+        </category>
+        
+        <category>
+        <pattern>NO</pattern>
+        <that>¿Deseas ver la lista de canciones</that>
+        <template>
+            Excelente, dime qué quieres saber ahora de ellos: discos, lista de canciones
+        </template>
+    </category>
         
         <category>
         <pattern>* PLEASE PLEASE ME</pattern>
