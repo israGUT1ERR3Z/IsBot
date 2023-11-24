@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
     <category>
-        <pattern>* HACES</pattern>
-        <template>
-            Soy un chatbot enfocado en música de rock clásico. Poseo ciertos datos básicos de
-            bandas musicales y álbumes. Cualquier pregunta que tengas, si está dentro de mi
-            base de datos, te la puedo decir con mucho gusto .
-        </template>
-    </category>
-    
-    <category>
         <pattern>* BANDAS *</pattern>
         <template>
             Poseo información de bandas clásicas como Queen, The Rolling Stones, The Beatles, Led
             Zepelin, entre otros Sin embargo, en este momento solamente poseo información sobre The
-            Beatles. Pero en un furuto cercano, almacenaré de otras bandas geniales de rock.
+            Beatles. Pero en un futuro cercano, almacenaré de otras bandas geniales de rock.
+            Indicame solo el nombre de la banda
         </template>
     </category>
     
     <category>
-        <pattern>* BEATLES</pattern>
+        <pattern>THE BEATLES</pattern>
         <template>
             Con gusto. Dime lo que necesitas de ellos discos, lista de canciones: 
             <set name = "topic">THE BEATLES</set>
@@ -27,35 +19,57 @@
     </category>
     
     <topic name = "THE BEATLES">
+         <category>
+        <pattern>* INFORMACION</pattern>
+        <template>
+            Con gusto. Dime lo que necesitas de ellos discos, lista de canciones: 
+        </template>
+    </category>
+        
         <category>
-            <pattern>* DISCOS</pattern>
+            <pattern>DISCOS</pattern>
             <template>
-                ¿Qué información quieres saber de sus discos? Historia, lista de canciones
+                ¿Qué información quieres saber de sus discos: Historia, lista de canciones?
             </template>
         </category>
         
         <category>
-            <pattern>* LISTA DE CANCIONES</pattern>
+            <pattern>LISTA DE CANCIONES</pattern>
+            <template>Escribe el nombre del disco:</template>
+        </category>
+        
+        <category>
+            <pattern>DISCOS</pattern>
+            <that>Excelente, dime qué quieres saber ahora de ellos discos, lista de canciones</that>
+            <template>
+                ¿Qué información quieres saber de sus discos: Historia, lista de canciones?
+            </template>
+        </category>
+        
+        <category>
+            <pattern>LISTA DE CANCIONES</pattern>
+            <that>Excelente, dime qué quieres saber ahora de ellos discos, lista de canciones</that>
             <template>Escribe el nombre del disco:</template>
         </category>
     
         <category>
-            <pattern>* HISTORIA</pattern>
-            <that>¿Qué información quieres saber de sus discos</that>
+            <pattern>HISTORIA</pattern>
+            <that>¿Qué información quieres saber de sus discos historia, lista de canciones</that>
             <template>Dime de qué disco quieres conocer</template>
         </category>
         
         <category>
-            <pattern>* LISTA DE CANCIONES</pattern>
-            <that>¿Qué información quieres saber de sus discos</that>
+            <pattern>LISTA DE CANCIONES</pattern>
+            <that>¿Qué información quieres saber de sus discos historia, lista de canciones</that>
             <template>Escribe el nombre del disco:</template>
         </category>
 
   
         <category>
-        <pattern>* PLEASE PLEASE ME</pattern>
+        <pattern>PLEASE PLEASE ME</pattern>
         <that>Dime de qué disco quieres conocer</that>
         <template>
+        <image>https://www.thebeatles.com/sites/default/files/2021-06/Please%20Please%20Me.jpg</image>
         Please Please Me (1963) fue el primer álbum lanzado por EMI-Parlophone el 22 de marzo de 
         1963. Diez de las catorce canciones de dicho álbum en un solo día (11 de febrero de 1963). 
         Las cuatro canciones restantes habían sido grabadas en 1962 y formaron parte del lado B del
@@ -63,6 +77,7 @@
         entonces sede de EMI Limited en el 20 de Manchester Square en el West End de Londres a 
         principios de 1963 por Angus McBean.
         ¿Deseas ver la lista de canciones?
+         <think><set name = "album">PLEASE PLEASE ME</set></think>
         </template>
         </category>
         
@@ -71,7 +86,8 @@
         <that>¿Deseas ver la lista de canciones</that>
         <template>
             Perfecto, aquí está la lista de canciones:
-            <ol>
+             <condition name = "album" value = "PLEASE PLEASE ME">
+                 <ol>
                 <li>I Saw Her Standing There</li>
                 <li>Misery</li>
                 <li>Anna (Go To Him)</li>
@@ -87,6 +103,27 @@
                 <li>There's a Place</li>
                 <li>Twist and Shout</li>
             </ol>
+             </condition>
+             
+             <condition name = "album" value = "WITH THE BEATLES">
+                <ol>
+                <li>It Won't Be Long</li>
+                <li>All I've Got to Do</li>
+                <li>All My Loving</li>
+                <li>Don't Bother Me</li>
+                <li>Little Child</li>
+                <li>Till There Was You</li>
+                <li>Please Mister Postman</li>
+                <li>Roll Over Beethoveen</li>
+                <li>Hold Me Tight</li>
+                <li>You've Really Got a Hold on Me</li>
+                <li>I Wanna Be Your Man</li>
+                <li>Devil in Her Heart</li>
+                <li>Not a Second Time</li>
+                <li>Money (That's What I Want)</li>
+            </ol>
+             </condition>
+            
         </template>
         </category>
         
@@ -99,7 +136,7 @@
     </category>
         
         <category>
-        <pattern>* PLEASE PLEASE ME</pattern>
+        <pattern>PLEASE PLEASE ME</pattern>
         <that>Escribe el nombre del disco</that>
         <template>
             <ol>
@@ -120,11 +157,35 @@
             </ol>
         </template>
         </category>
+
+        <category>
+        <pattern>WITH THE BEATLES</pattern>
+        <that>Escribe el nombre del disco</that>
+        <template>
+            <ol>
+                <li>It Won't Be Long</li>
+                <li>All I've Got to Do</li>
+                <li>All My Loving</li>
+                <li>Don't Bother Me</li>
+                <li>Little Child</li>
+                <li>Till There Was You</li>
+                <li>Please Mister Postman</li>
+                <li>Roll Over Beethoveen</li>
+                <li>Hold Me Tight</li>
+                <li>You've Really Got a Hold on Me</li>
+                <li>I Wanna Be Your Man</li>
+                <li>Devil in Her Heart</li>
+                <li>Not a Second Time</li>
+                <li>Money (That's What I Want)</li>
+            </ol>
+        </template>
+        </category>
         
         <category>
-        <pattern>* WITH THE BEATLES</pattern>
+        <pattern>WITH THE BEATLES</pattern>
         <that>Dime de qué disco quieres conocer</that>
         <template>
+        <image>https://www.thebeatles.com/sites/default/files/2021-06/With%20the%20Beatles.jpg</image>
         With The Beatles continuó donde Please Please Me lo había dejado, fundiendo más canciones
         originales de Lennon-McCartney con más momentos destacados de su etapa.También incluyó 
         el debut como compositor George Harrison.The Beatles tuvieron que grabar su segundo disco 
@@ -133,6 +194,8 @@
         gira internacional a Suecia. Fue en esta época cuando el término Beatlemanía se acuñó por 
         primera vez y esto fue muy evidente cuando participaron en el Royal Variety Performance de 
         ese año en presencia la Reina Isabel.
+        ¿Deseas ver la lista de canciones?
+        <think><set name = "album">WITH THE BEATLES</set></think>
         </template>
         </category>
     

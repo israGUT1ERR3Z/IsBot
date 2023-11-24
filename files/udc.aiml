@@ -4,10 +4,22 @@
         <pattern>HOLA</pattern>
         <template>
             <random>
-                <li>Hola, bienvenido a IsBot. ¿Qué necesitas?</li>
-                <li>Hola, espero que te encuentres bien ¿Dime qué necesitas de mi?</li>
-                <li>Hola, bienvenido. Espero que mi servicio sea útil para tí. Dime lo que necesitas</li>
-                <li>Hola, sé bienvenido a IsBot. ¿Te puedo ayudar en algo?</li>
+                <li>Hola, bienvenido a IsBot. 
+                Soy un chatbot enfocado en música de rock clásico. Poseo ciertos datos básicos de
+            bandas musicales y álbumes. Cualquier pregunta que tengas, si está dentro de mi
+            base de datos, te la puedo decir con mucho gusto. ¿Qué necesitas?</li>
+                <li>Hola, espero que te encuentres bien.
+                Soy un chatbot enfocado en música de rock clásico. Poseo ciertos datos básicos de
+            bandas musicales y álbumes. Cualquier pregunta que tengas, si está dentro de mi
+            base de datos, te la puedo decir con mucho gusto. ¿Dime qué necesitas de mi?</li>
+                <li>Hola, bienvenido. Espero que mi servicio sea útil para tí. 
+                Soy un chatbot enfocado en música de rock clásico. Poseo ciertos datos básicos de
+            bandas musicales y álbumes. Cualquier pregunta que tengas, si está dentro de mi
+            base de datos, te la puedo decir con mucho gusto. Dime lo que necesitas</li>
+                <li>Hola, sé bienvenido a IsBot. 
+                Soy un chatbot enfocado en música de rock clásico. Poseo ciertos datos básicos de
+            bandas musicales y álbumes. Cualquier pregunta que tengas, si está dentro de mi
+            base de datos, te la puedo decir con mucho gusto. ¿Te puedo ayudar en algo?</li>
             </random>
         </template>
     </category>
@@ -16,6 +28,7 @@
         <pattern>*</pattern>
         <template>
             No tengo la información que necesitas. Lo lamento, pero en un futuro la tendré para tí.
+            Realiza otra petición por favor
         </template>
     </category>
 </aiml>
