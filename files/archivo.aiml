@@ -89,6 +89,10 @@
                 <li>There's a Place</li>
                 <li>Twist and Shout</li>
             </ol>
+            <link>
+                <text>HAZ CLCIK PARA ESCUCHAR EL DISCO</text>
+                <url>https://open.spotify.com/album/3KzAvEXcqJKBF97HrXwlgf?si=qi20znpCTT-aa2OLlJ6mKg</url>
+            </link>
              </condition>
              
              <condition name = "album" value = "WITH THE BEATLES">
@@ -108,6 +112,10 @@
                 <li>Not a Second Time</li>
                 <li>Money (That's What I Want)</li>
             </ol>
+            <link>
+                <text>HAZ CLCIK PARA ESCUCHAR EL DISCO</text>
+                <url>https://open.spotify.com/intl-es/album/1aYdiJk6XKeHWGO3FzHHTr?si=GPStwYsVRaC6QkEwAqaaQw</url>
+            </link>
              </condition>
         Si quieres más información, solo dímelo
         </template>
@@ -141,6 +149,10 @@
                 <li>There's a Place</li>
                 <li>Twist and Shout</li>
             </ol>
+            <link>
+                <text>HAZ CLCIK PARA ESCUCHAR EL DISCO</text>
+                <url>https://open.spotify.com/album/3KzAvEXcqJKBF97HrXwlgf?si=qi20znpCTT-aa2OLlJ6mKg</url>
+            </link>
             Si quieres más información, solo dímelo
         </template>
         </category>
@@ -165,6 +177,10 @@
                 <li>Not a Second Time</li>
                 <li>Money (That's What I Want)</li>
             </ol>
+            <link>
+                <text>HAZ CLCIK PARA ESCUCHAR EL DISCO</text>
+                <url>https://open.spotify.com/intl-es/album/1aYdiJk6XKeHWGO3FzHHTr?si=GPStwYsVRaC6QkEwAqaaQw</url>
+            </link>
             Si quieres más información, solo dímelo
         </template>
         </category>
