@@ -37,20 +37,6 @@
             <pattern>LISTA DE CANCIONES</pattern>
             <template>Escribe el nombre del disco:</template>
         </category>
-        
-        <category>
-            <pattern>DISCOS</pattern>
-            <that>Excelente, dime qué quieres saber ahora de ellos discos, lista de canciones</that>
-            <template>
-                ¿Qué información quieres saber de sus discos: Historia, lista de canciones?
-            </template>
-        </category>
-        
-        <category>
-            <pattern>LISTA DE CANCIONES</pattern>
-            <that>Excelente, dime qué quieres saber ahora de ellos discos, lista de canciones</that>
-            <template>Escribe el nombre del disco:</template>
-        </category>
     
         <category>
             <pattern>HISTORIA</pattern>
